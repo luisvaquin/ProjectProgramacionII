@@ -1,16 +1,18 @@
 COLORS = {
-    "window_background": "#f4f6f8",
+    "window_background": "#f7f8f6",
     "card_background": "#ffffff",
-    "title": "#1f2937",
+    "title": "#173f3a",
     "text": "#374151",
     "muted": "#6b7280",
     "note": "#9ca3af",
-    "input_background": "#f9fafb",
+    "border": "#e2e8f0",
+    "shadow": "#cbd5e1",
+    "input_background": "#f8fafc",
     "input_text": "#111827",
-    "primary": "#2563eb",
-    "primary_active": "#1d4ed8",
-    "secondary": "#e5e7eb",
-    "secondary_active": "#d1d5db",
+    "primary": "#0f766e",
+    "primary_active": "#0b5d57",
+    "secondary": "#f1f5f4",
+    "secondary_active": "#e3ece9",
     "secondary_text": "#374151",
     "secondary_text_active": "#111827",
     "button_text": "#ffffff",
@@ -26,13 +28,13 @@ FONTS = {
 }
 
 WINDOW = {
-    "width": 420,
-    "height": 500,
+    "width": 440,
+    "height": 640,
 }
 
 CARD = {
-    "width": 350,
-    "height": 420,
-    "padding_x": 32,
-    "padding_y": 32,
+    "width": 370,
+    "height": 570,
+    "padding_x": 34,
+    "padding_y": 34,
 }

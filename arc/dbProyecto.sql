@@ -42,6 +42,7 @@ CREATE TABLE productos (
   id_unidad INT NOT NULL,
   id_presentacion INT NOT NULL,
   descripcion VARCHAR(150) NOT NULL,
+  imagen_url VARCHAR(500) NULL,
   precio DECIMAL(10, 2) NOT NULL,
   estado ENUM('ACTIVO', 'INACTIVO') NOT NULL DEFAULT 'ACTIVO',
   fecha_registro DATE NOT NULL,
@@ -61,12 +62,18 @@ CREATE TABLE inventario_movimientos (
   codigo_producto VARCHAR(20) NOT NULL,
   id_usuario INT NOT NULL,
   tipo_movimiento ENUM('ENTRADA', 'SALIDA', 'AJUSTE') NOT NULL,
+  direccion_ajuste ENUM('SUMA', 'RESTA') NULL,
   cantidad INT NOT NULL,
   fecha DATE NOT NULL,
   observacion VARCHAR(200) NULL,
   fecha_creacion DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT chk_inventario_cantidad
     CHECK (cantidad > 0),
+  CONSTRAINT chk_inventario_ajuste
+    CHECK (
+      (tipo_movimiento = 'AJUSTE' AND direccion_ajuste IS NOT NULL)
+      OR (tipo_movimiento <> 'AJUSTE' AND direccion_ajuste IS NULL)
+    ),
   CONSTRAINT fk_movimientos_productos
     FOREIGN KEY (codigo_producto) REFERENCES productos(codigo),
   CONSTRAINT fk_movimientos_usuarios

@@ -27,7 +27,7 @@ Permisos:
 - Generar reporte de usuarios
 - Crear productos
 - Modificar productos
-- Activar/inactivar productos
+- Eliminar productos sin movimientos de inventario
 - Registrar movimientos de inventario
 - Ver reportes de inventario
 
@@ -37,7 +37,7 @@ Permisos:
 - Acceder al menu principal
 - Crear productos
 - Modificar productos
-- Activar/inactivar productos
+- Eliminar productos sin movimientos de inventario
 - Registrar movimientos de inventario
 - Ver reportes de inventario
 
